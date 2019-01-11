@@ -1,0 +1,73 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+
+  <form class="needs-validation" novalidate>
+    <label for="text" class="col-form-label">Your Name*</label>
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+           <input type="text"
+           id="validationCustom01" 
+           class="form-control"  
+           placeholder="First name" 
+           [(ngmodel)="fName"] 
+           required>
+
+           <label for="validationCustom01">First name</label>
+        </div>
+       <div class="col-md-6 mb-3">
+          <input type="text" 
+          class="form-control" 
+          id="validationCustom02" 
+          placeholder="Last name"  
+          required>
+          <label for="validationCustom02">Last name</label>
+      </div>
+    </div>
+
+
+    <!--email id-->
+    <div class="form-row">
+        <div class="col-md-12 mb-3">
+            <label for="text" class="col-form-label">Email*</label>
+            <input type="email" 
+            id="email" 
+            name="email" 
+            placeholder="Email" 
+            class="form-control here" 
+            required>
+         </div> 
+    </div>
+    
+
+     <!--impact-->
+     <div class="form-row">
+        <div class="col-md-12 mb-3">
+            <label for="text" class="col-form-label">Impact*</label>
+            <select id="select" name="select" class="custom-select">
+                <option value="admin">Low</option>
+                <option value="admin">High</option>
+              </select>
+        </div> 
+    </div>
+
+    <!--Detailed explaination of bug -->
+    <div class="form-row">
+        <div class="col-md-12 mb-3">
+            <label for="text" class="col-form-label">Detailed explaination of bug*</label>
+            <textarea id="publicinfo" 
+            name="publicinfo" 
+            cols="40" 
+            rows="4" 
+            class="form-control"></textarea>
+        </div> 
+    </div>
+
+    <div class="form-row">
+         <button class="btn btn-primary" 
+         type="submit"
+         (click)="submitData()">Submit form</button>
+    </div> 
+    </form>
+</div>
+
+<router-outlet></router-outlet>
